@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import pandas as pd
 import geopandas as gpd
 import matplotlib.pyplot as plt
@@ -7,7 +8,7 @@ import matplotlib.pyplot as plt
 plt.rcParams["font.family"] = "Malgun Gothic"
 plt.rcParams["axes.unicode_minus"] = False
 
-BASE_DIR = r"D:\캡스톤"
+BASE_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
